@@ -27,8 +27,9 @@ const Movie = (props) => {
   // Uncomment this only when you have moved on to the stretch goals
   const saveMovie = () => {
     const addToSavedList = props.addToSavedList;
-    // addToSavedList(<NavLink to={`/${movie.id}`} key={movie.id} activeClassName="activeNavButton">{movie.title}</NavLink>);
-    addToSavedList(movie);
+    addToSavedList(<NavLink to={`/${id}`} key={movie.id} activeClassName="activeNavButton">{movie.title}</NavLink>);
+    // addToSavedList(movie);
+    props.history.push("/");
   }
 
   if (!movie) {
